@@ -33,6 +33,6 @@
                 <version>2.0.4</version>
             </plugin>
 	</plugins>
-	<pluginManagement>
+	</pluginManagement>
 	</build>
 </project>
