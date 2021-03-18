@@ -9,7 +9,7 @@
     <version>1.0-SNAPSHOT</version>
     <name>maven-simple</name>
 	<build>
-		<sourceDirectory>src</sourceDirectory>
+		<sourceDirectory>/module3/maven-simple/src</sourceDirectory>
 	<pluginManagement>	
 	<plugins>
 		<plugin>
