@@ -10,9 +10,9 @@
     <name>maven-simple</name>
     <dependencies>
     <dependency>
-    	 <groupId>commons-io</groupId>
-         <artifactId>commons-io</artifactId>
-    	 <version>2.6</version>
+    	 <groupId>org.apache.commons</groupId>
+         <artifactId>commons-lang3</artifactId>
+    	 <version>3.1</version>
     </dependency>
     </dependencies>
     <properties>
