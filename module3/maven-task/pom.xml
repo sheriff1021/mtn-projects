@@ -14,6 +14,15 @@
          <artifactId>commons-collections4</artifactId>
     	 <version>4.4</version>
     </dependency>
+         <groupId>org.apache.commons</groupId>
+         <artifactId>commons-lang3</artifactId>
+         <version>3.4</version>
+
+    <dependency>
+	<groupId>commons-collections</groupId>
+         <artifactId>commons-collections</artifactId>
+         <version>3.2.2</version>
+    </dependency
     </dependencies>
     <properties>
    	<maven.compiler.source>6</maven.compiler.source>
