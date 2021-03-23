@@ -55,19 +55,29 @@
                 <artifactId>maven-source-plugin</artifactId>
                 <version>2.0.4</version>
          </plugin>
-<plugin>
-    <artifactId>maven-assembly-plugin</artifactId>
-    <configuration>
-        <archive>
-            <manifest>
-                <mainClass>com.test.Project</mainClass>
-            </manifest>
-        </archive>
-        <descriptorRefs>
-            <descriptorRef>jar-with-dependencies</descriptorRef>
-        </descriptorRefs>
-    </configuration>
-</plugin>
+	<plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>3.0.0</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                        <configuration>
+                            <transformers>
+                                <transformer
+                                        implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                    <manifestEntries>
+                                        <Main-Class>com.test.Project</Main-Class>
+                                    </manifestEntries>
+                                </transformer>
+                            </transformers>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
 	</plugins>
 	</pluginManagement>
 	</build>
