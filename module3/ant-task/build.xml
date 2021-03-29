@@ -12,7 +12,7 @@
     <javac srcdir="${src}" destdir="${build}"/>
   </target>
   <target name="resolve" description="--> retrieve dependencies with ivy">
-    <ivy:retrieve />
+    <retrieve />
   </target>
 
 <!--
