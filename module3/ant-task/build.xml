@@ -1,4 +1,4 @@
-<project name="ant-task-" default="dist" basedir=".">
+<project name="ant-task-" default="compile" basedir="." xmlns:ivy="antlib:org.apache.ivy.ant">
 
   <property name="src" location="src"/>
   <property name="build" location="build"/>
