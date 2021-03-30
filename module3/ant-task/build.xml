@@ -5,12 +5,12 @@
   <property name="dist"  location="dist"/>
   <property name="version" value="2.0" />
   <property name="Main-class"  value="com.test.Project"/>
-  <target name="init">
+  <target name="init" depends="clean">
     <mkdir dir="${build}"/>
   </target>
   <target name="compile" depends="init" >
-    <javac srcdir="${src}" destdir="${build}"/>
     <javac srcdir="test" destdir="${build}"/>
+	<exclude name="build/test/com/test"/>
   </target>
 <target name="jar" depends="compile">
         <mkdir dir="build/jar"/>
@@ -20,7 +20,9 @@
             </manifest>
         </jar>
     </target>
+<!--
 <target name="test" depends="compile">
+	<javac srcdir="${src}" destdir="${build}"/>
 	<junit>
 		<classpath>
 		<pathelement location="${src}"/>
@@ -28,6 +30,7 @@
 		</classpath>
 	</junit>
 </target>
+-->
   <target name="clean">
     <delete dir="${build}"/>
     <delete dir="${dist}"/>
