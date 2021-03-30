@@ -10,25 +10,24 @@
   </target>
   <target name="compile" depends="init" >
     <javac srcdir="${src}" destdir="${build}"/>
+    <javac srcdir="test" destdir="${build}"/>
   </target>
-  <target name="resolve" description="--> retrieve dependencies with ivy">
-    <retrieve />
-  </target>
-
-<!--
-  <target name="dist" depends="compile" >
-    <mkdir dir="${dist}/lib"/>
-    <jar jarfile="${dist}/lib/testProject.jar" basedir="${build}"/>
-  </target>
--->
 <target name="jar" depends="compile">
         <mkdir dir="build/jar"/>
-        <jar destfile="build/jar/HelloWorld.jar" basedir="build/classes">
+        <jar destfile="build/jar/HelloWorld.jar" basedir="build/com/test">
             <manifest>
                <attribute name="Main-Class" value="com.test.Project"/>
             </manifest>
         </jar>
     </target>
+<target name="test" depends="compile">
+	<junit>
+		<classpath>
+		<pathelement location="${src}"/>
+		<test name="UnitTest"/>
+		</classpath>
+	</junit>
+</target>
   <target name="clean">
     <delete dir="${build}"/>
     <delete dir="${dist}"/>
