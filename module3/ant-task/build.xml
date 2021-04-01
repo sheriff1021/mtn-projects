@@ -5,7 +5,10 @@
   <property name="dist"  location="dist"/>
   <property name="version" value="2.0" />
   <property name="Main-class"  value="com.test.Project"/>
-  <target name="init" depends="clean">
+  <property name="report" location="build/report"/>
+  <property name="unitdir" location="build/com/unit"/>
+
+  <target name="init">
     <mkdir dir="${build}"/>
   </target>
   <target name="compile" depends="init" >
@@ -23,12 +26,27 @@
             </manifest>
         </jar>
     </target>
-<target name="test" depends="compile">
-	<javac srcdir="test/com/test" destdir="${build}" includeantruntime="false">
+
+<target name="test-compile">
+	<mkdir dir="${unitdir}"/>
+	<javac srcdir="test/com/test" destdir="${unitdir}" includeantruntime="false">
 		<classpath>
 		<pathelement path="lib/junit-4.11.jar"/>
 		</classpath>
 	</javac>
+</target>
+
+<target name="test-run" depends="test-compile">
+	<mkdir dir="build/jar"/>
+	<junit printsummary="on" haltonfailure="yes">
+		<classpath location="/build/com/test/com/test/UnitTest.Class"/>
+		<!--<batchtest todir="${report}">
+			<fileset dir="/build/com/test">
+	                <include name="*.java" />
+        		</fileset>
+		</batchtest>-->
+		<test name="UnitTest"/>
+	</junit>
 </target>
 
 
