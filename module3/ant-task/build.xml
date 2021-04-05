@@ -50,7 +50,7 @@
 
 		<test name="UnitTest"/>
 		
-		<formatter type="xml" usefile="yes" todir="build"/>		
+		<formatter type="xml" usefile="yes"/>		
 	</junit>
 </target>
 
