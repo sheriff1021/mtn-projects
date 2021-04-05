@@ -44,7 +44,7 @@
 		</classpath>
 		<test name="UnitTest"/>
 		<batchtest haltonfailure="false" fork="true" todir="reports"/>
-		<formatter type="plain"/>		
+		<formatter type="xml"/>		
 	</junit>
 </target>
 
