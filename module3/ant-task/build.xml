@@ -43,7 +43,7 @@
 		<pathelement path="lib/junit-4.11.jar"/>
 		</classpath>
 		<test name="UnitTest"/>
-		<batchtest haltonfailure="false" fork="true" todir="reports"/>
+		<batchtest haltonfailure="false" fork="true" todir="build/com/unit"/>
 		<formatter type="xml"/>		
 	</junit>
 </target>
