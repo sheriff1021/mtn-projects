@@ -7,6 +7,13 @@
   <property name="Main-class"  value="com.test.Project"/>
   <property name="report" location="build/report"/>
   <property name="unitdir" location="build/com/unit"/>
+  <path id="classpath.test" >
+	<pathelement location="lib/junit-4.11.jar"/>
+	<pathelement location="/build/com/unit/com/test/UnitTest.Class"/>
+	<pathelement location="/build/com/test/Project.Class"/>
+  </path>
+
+
 
   <target name="init">
     <mkdir dir="${build}"/>
@@ -38,13 +45,11 @@
 
 <target name="test-run" depends="test-compile">
 	<junit printsummary="true" haltonfailure="false">
-		<classpath location="/build/com/test/com/test/UnitTest.Class"/>
-		<classpath>
-		<pathelement path="lib/junit-4.11.jar"/>
-		</classpath>
-		<!--<test name="UnitTest.java"/> -->
-		<batchtest haltonfailure="false" fork="true" todir="build/com/unit"/>
-		<formatter type="xml"/>		
+		<classpath refid="">
+
+		<test name="UnitTest"/>
+		
+		<formatter type="xml" outfile="result"/>		
 	</junit>
 </target>
 
