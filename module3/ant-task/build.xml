@@ -49,7 +49,7 @@
 
 		<test name="UnitTest"/>
 		
-		<formatter type="xml" outfile="result"/>		
+		<formatter type="xml" usefile="yes"/>		
 	</junit>
 </target>
 
