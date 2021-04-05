@@ -45,7 +45,7 @@
 
 <target name="test-run" depends="test-compile">
 	<junit printsummary="true" haltonfailure="false">
-		<classpath refid="">
+		<classpath refid="classpath.test"/>
 
 		<test name="UnitTest"/>
 		
