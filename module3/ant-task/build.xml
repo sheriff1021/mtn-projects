@@ -9,6 +9,7 @@
   <property name="unitdir" location="build/com/unit"/>
   <path id="classpath.test" >
 	<pathelement location="lib/junit-4.11.jar"/>
+<pathelement path="lib/commons-collections-3.2.1.jar"/>
 	<pathelement location="/build/com/unit/com/test/UnitTest.Class"/>
 	<pathelement location="/build/com/test/Project.Class"/>
   </path>
