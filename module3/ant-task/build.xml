@@ -37,12 +37,12 @@
 </target>
 
 <target name="test-run" depends="test-compile">
-	<junit printsummary="on" haltonfailure="yes">
+	<junit printsummary="on" haltonfailure="false">
 		<classpath location="/build/com/test/com/test/UnitTest.Class"/>
 		<classpath>
 		<pathelement path="lib/junit-4.11.jar"/>
 		</classpath>
-		<test name="UnitTest"/>
+		<test name="UnitTest.java"/>
 		<batchtest haltonfailure="false" fork="true" todir="build/com/unit"/>
 		<formatter type="xml"/>		
 	</junit>
