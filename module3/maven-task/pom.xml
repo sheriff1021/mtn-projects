@@ -9,6 +9,13 @@
     <packaging>jar</packaging>
     <version>1.0-SNAPSHOT</version>
     <name>maven-simple</name>
+    <distributionManagement>
+	<repository>
+		<id>deployment</id>
+		<name>Internal releases</name>
+		<url>http://localhost:8081/repository/my/</url>
+	</repository>	
+    </distributionManagement>
     <dependencies>
     <dependency>
          <groupId>junit</groupId>
