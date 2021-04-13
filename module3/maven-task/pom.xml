@@ -15,11 +15,11 @@
 		<name>Internal releases</name>
 		<url>http://localhost:8081/repository/my/</url>
 	</repository>	
-	<repository>
+	<snapshotRepository>
 		<id>snapshots</id>
 		<name>snapshots</name>
 		<url>http://localhost:8081/repository/mysnap/</url>
-	</repository>	
+	</snapshotRepository>	
     </distributionManagement>
     <dependencies>
     <dependency>
