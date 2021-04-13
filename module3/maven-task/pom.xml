@@ -13,7 +13,12 @@
 	<repository>
 		<id>deployment</id>
 		<name>Internal releases</name>
-		<url>http://localhost:8081/repository/maven-central/</url>
+		<url>http://localhost:8081/repository/my/</url>
+	</repository>	
+	<repository>
+		<id>snapshots</id>
+		<name>snapshots</name>
+		<url>http://localhost:8081/repository/mysnap/</url>
 	</repository>	
     </distributionManagement>
     <dependencies>
